@@ -217,6 +217,50 @@
     </div>
   </section>
 
+  <!-- ========== 数据洞察 ========== -->
+  <section id="insights" class="insights-section">
+    <div class="section-header">
+      <h2>数据洞察</h2>
+      <p>你的写作习惯，一目了然</p>
+    </div>
+    <div class="insights-container">
+      <div class="insight-card">
+        <h3>写作热力图</h3>
+        <p class="insight-desc">按天查看你的写作记录，颜色越深写得越多。坚持写作的痕迹清晰可见。</p>
+        <div class="heatmap">
+          <div class="heatmap-months">
+            <span>1月</span><span>2月</span><span>3月</span><span>4月</span><span>5月</span><span>6月</span>
+          </div>
+          <div class="heatmap-grid">
+            <div class="hm-row"><span class="hm-label">一</span><div class="hm-cells" id="heatmap-cells"></div></div>
+            <div class="hm-row"><span class="hm-label">三</span><div class="hm-cells"></div></div>
+            <div class="hm-row"><span class="hm-label">五</span><div class="hm-cells"></div></div>
+            <div class="hm-row"><span class="hm-label">日</span><div class="hm-cells"></div></div>
+          </div>
+          <div class="heatmap-legend">
+            <span>少</span>
+            <i class="hl hl-0"></i><i class="hl hl-1"></i><i class="hl hl-2"></i><i class="hl hl-3"></i><i class="hl hl-4"></i>
+            <span>多</span>
+          </div>
+        </div>
+      </div>
+      <div class="insight-card">
+        <h3>标签统计</h3>
+        <p class="insight-desc">你最常使用的标签一目了然。写作重心在哪，数据会告诉你。</p>
+        <div class="tag-stats">
+          <div class="tag-bar"><span class="tag-name">日记</span><div class="tag-track"><div class="tag-fill" style="width:92%"></div></div><span class="tag-count">187</span></div>
+          <div class="tag-bar"><span class="tag-name">AI 笔记</span><div class="tag-track"><div class="tag-fill" style="width:71%"></div></div><span class="tag-count">144</span></div>
+          <div class="tag-bar"><span class="tag-name">读书笔记</span><div class="tag-track"><div class="tag-fill" style="width:58%"></div></div><span class="tag-count">118</span></div>
+          <div class="tag-bar"><span class="tag-name">项目</span><div class="tag-track"><div class="tag-fill" style="width:46%"></div></div><span class="tag-count">93</span></div>
+          <div class="tag-bar"><span class="tag-name">灵感</span><div class="tag-track"><div class="tag-fill" style="width:35%"></div></div><span class="tag-count">71</span></div>
+          <div class="tag-bar"><span class="tag-name">产品</span><div class="tag-track"><div class="tag-fill" style="width:27%"></div></div><span class="tag-count">55</span></div>
+          <div class="tag-bar"><span class="tag-name">技术</span><div class="tag-track"><div class="tag-fill" style="width:18%"></div></div><span class="tag-count">37</span></div>
+          <div class="tag-bar"><span class="tag-name">随笔</span><div class="tag-track"><div class="tag-fill" style="width:12%"></div></div><span class="tag-count">24</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== 定价 ========== -->
   <section id="pricing" class="pricing">
     <div class="section-header">
@@ -292,5 +336,19 @@
     </div>
   </footer>
 
+  <script>
+    // 生成热力图示例数据
+    document.getElementById('heatmap-cells') && (function(){
+      var cell = document.querySelectorAll('.hm-cells');
+      var levels = [0,0,0,1,1,1,2,2,3,4];
+      cell.forEach(function(container){
+        for(var i=0;i<26;i++){
+          var c = document.createElement('i');
+          c.className = 'hc hc-'+levels[Math.floor(Math.random()*levels.length)];
+          container.appendChild(c);
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
