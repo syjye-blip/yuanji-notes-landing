@@ -591,7 +591,298 @@ body {
 .footer-bottom { text-align: center; }
 .footer-bottom p { font-size: 12px; color: var(--text-sec); }
 
-/* ========== 为什么选择元吉笔记 ========== */
+/* ========== Problem ========== */
+.problem {
+  padding: 100px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.problem-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.problem-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px 24px;
+  background: var(--surface1);
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  transition: border-color .2s;
+}
+.problem-item:hover { border-color: rgba(239, 68, 68, 0.4); }
+.prob-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+.prob-text h3 { font-size: 16px; margin-bottom: 4px; }
+.prob-text p { font-size: 14px; color: var(--text-sec); line-height: 1.6; }
+.problem-punchline {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.highlight {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========== Risk Awareness ========== */
+.risk-awareness {
+  max-width: 700px;
+  margin: 48px auto 0;
+  padding: 32px;
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(239, 68, 68, 0.02));
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius);
+}
+.risk-awareness h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--text);
+}
+.risk-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.risk-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.risk-num {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ef4444;
+  flex-shrink: 0;
+  width: 24px;
+}
+.risk-text strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.risk-text p {
+  font-size: 13px;
+  color: var(--text-sec);
+  line-height: 1.6;
+}
+
+/* ========== Anchor Line ========== */
+.anchor-line {
+  text-align: center;
+  margin-top: 40px;
+  padding: 24px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* ========== Migration ========== */
+.migration {
+  padding: 100px 24px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+.migration-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.migration-card {
+  background: var(--surface1);
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: border-color .2s, transform .2s;
+}
+.migration-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.mig-icon { font-size: 32px; margin-bottom: 16px; }
+.migration-card h3 { font-size: 16px; margin-bottom: 8px; line-height: 1.4; }
+.migration-card p { font-size: 14px; color: var(--text-sec); line-height: 1.7; }
+
+/* ========== Pricing Closer ========== */
+.pricing-closer {
+  text-align: center;
+  font-size: 13px;
+  color: var(--accent);
+  margin-top: 16px;
+  font-weight: 500;
+}
+
+/* ========== Solution ========== */
+.solution {
+  padding: 100px 24px;
+  background: var(--surface1);
+}
+.solution-cards {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.sol-card {
+  background: var(--bg);
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  padding: 32px;
+  text-align: center;
+  transition: border-color .2s, transform .2s;
+}
+.sol-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.sol-icon { font-size: 36px; margin-bottom: 16px; }
+.sol-card h3 { font-size: 18px; margin-bottom: 8px; }
+.sol-card p { font-size: 14px; color: var(--text-sec); line-height: 1.7; }
+
+/* ========== Difference / 对比表 ========== */
+.difference {
+  padding: 100px 24px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+.diff-table-wrap { overflow-x: auto; }
+.diff-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+.diff-table th,
+.diff-table td {
+  padding: 16px 24px;
+  text-align: left;
+  border-bottom: 1px solid var(--muted);
+}
+.diff-table th {
+  font-weight: 600;
+  background: var(--surface1);
+}
+.diff-table thead th:first-child { border-radius: 12px 0 0 0; }
+.diff-table thead th:last-child { border-radius: 0 12px 0 0; }
+.col-win { color: var(--accent); }
+.td-win { color: #22c55e; font-weight: 500; }
+.dim-label { font-weight: 500; color: var(--text); }
+.diff-punchline {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ========== Scenario ========== */
+.scenario {
+  padding: 100px 24px;
+  background: var(--surface1);
+}
+.scenario-grid {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.scenario-card {
+  background: var(--bg);
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  padding: 32px;
+  text-align: center;
+  transition: border-color .2s, transform .2s;
+}
+.scenario-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.scenario-icon { font-size: 36px; margin-bottom: 16px; }
+.scenario-card h3 { font-size: 18px; margin-bottom: 8px; }
+.scenario-card p { font-size: 14px; color: var(--text-sec); line-height: 1.7; }
+
+/* ========== Trust ========== */
+.trust {
+  padding: 100px 24px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.trust-item {
+  padding: 20px;
+  background: var(--surface1);
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  transition: border-color .2s;
+}
+.trust-item:hover { border-color: var(--accent); }
+.trust-punchline {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ========== Final CTA ========== */
+.final-cta {
+  padding: 100px 24px;
+  background: var(--surface1);
+  text-align: center;
+}
+.cta-content { max-width: 700px; margin: 0 auto; }
+.cta-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cta-footnote {
+  margin-top: 24px;
+  font-size: 14px;
+  color: var(--text-sec);
+}
+
+/* ========== Hero Visual ========== */
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 32px;
+  background: var(--surface1);
+  border: 1px solid var(--muted);
+  border-radius: 16px;
+  flex-wrap: wrap;
+}
+.vis-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+}
+.vis-icon { font-size: 36px; }
+.vis-label {
+  font-size: 13px;
+  color: var(--text-sec);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.vis-arrow {
+  font-size: 24px;
+  color: var(--accent);
+}
+
+/* ========== 为什么选择元吉笔记（保留旧 ID 引用）========= */
 .why-section {
   padding: 100px 24px;
   max-width: var(--max-w);
@@ -637,6 +928,125 @@ body {
   line-height: 1.7;
 }
 
+/* ========== 产品叙事图 ========== */
+.narrative {
+  padding: 100px 24px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+.narrative-dark {
+  background: var(--surface1);
+  max-width: none;
+  padding: 100px 24px;
+}
+.narrative-dark .narrative-content {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+.narrative-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.narrative-text {
+  direction: ltr;
+}
+.narrative-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.narrative-text h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.narrative-sub {
+  font-size: 16px;
+  color: var(--accent2);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.narrative-text p {
+  font-size: 15px;
+  color: var(--text-sec);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+.narrative-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.narrative-features li {
+  font-size: 14px;
+  color: var(--text);
+  padding: 10px 14px;
+  background: var(--surface2);
+  border-radius: 8px;
+}
+
+/* ========== 手机框架 ========== */
+.phone-frame {
+  width: 340px;
+  margin: 0 auto;
+  position: relative;
+}
+.phone-frame img {
+  width: 100%;
+  border-radius: 24px;
+  border: 3px solid var(--muted);
+  display: block;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+/* ========== 桌面框架 ========== */
+.desktop-frame {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.desktop-frame img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--muted);
+  display: block;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+}
+
+/* ========== 安全框架 ========== */
+.security-frame {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.security-frame img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--muted);
+  display: block;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+  .narrative-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .reverse { direction: ltr; }
+  .narrative-text h2 { font-size: 26px; }
+  .phone-frame { width: 260px; }
+}
+
 /* ========== 响应式 ========== */
 @media (max-width: 768px) {
   .nav-links a:not(.nav-cta) { display: none; }
@@ -650,4 +1060,14 @@ body {
   .mockup-sidebar { display: none; }
   .mockup-screen { height: 200px; }
   .pricing-card { margin: 0 8px; }
+  .solution-cards,
+  .scenario-grid,
+  .trust-grid,
+  .migration-grid { grid-template-columns: 1fr; }
+  .diff-table { font-size: 13px; }
+  .diff-table th,
+  .diff-table td { padding: 12px 16px; }
+  .vis-arrow { transform: rotate(90deg); }
+  .hero-visual { flex-direction: column; padding: 24px; }
+  .cta-content h2 { font-size: 26px; }
 }
