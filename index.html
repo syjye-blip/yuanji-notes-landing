@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>元吉笔记 — 你的笔记，不应该依赖任何外部系统</title>
+  <title>元吉笔记 — 你的笔记，不应该属于任何平台</title>
+  <meta name="description" content="本地优先的笔记工具。数据只存储在你的设备中，端到端加密，一次买断永久使用。支持 Windows + Android。">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,202 +13,138 @@
   <nav class="navbar">
     <div class="nav-container">
       <span class="nav-logo">✦ 元吉笔记</span>
-      <div class="nav-links">
-        <a href="#problem">为什么</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#pain">痛点</a>
+        <a href="#showcase">产品</a>
         <a href="#solution">方案</a>
         <a href="#difference">对比</a>
         <a href="#pricing">定价</a>
-        <a href="#download" class="nav-cta">立即下载</a>
+        <a href="#faq">FAQ</a>
+        <a href="#pricing" class="nav-cta">立即开始使用</a>
       </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
-  <!-- ========== ① HERO ========== -->
+  <!-- ========== ① HERO（版本B：情绪驱动） ========== -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <h1 class="hero-title">你的笔记，<br>不应该依赖任何<span class="gradient-text">外部系统</span></h1>
+      <h1 class="hero-title">你的笔记，<br>不应该属于<span class="gradient-text">任何平台</span></h1>
       <p class="hero-subtitle">
-        本地优先 · 双端同步 · 全程加密 · 无订阅<br>
-        所有数据只属于你自己
+        所有数据只存储在你的设备中<br>
+        永远不依赖任何云服务
       </p>
+      <div class="hero-tags">
+        <span class="tag">本地优先</span>
+        <span class="tag">双端同步</span>
+        <span class="tag">一次买断</span>
+      </div>
       <div class="hero-actions">
-        <a href="#download" class="btn btn-primary">🚀 立即下载</a>
-        <a href="#trust" class="btn btn-outline">🔒 查看安全设计</a>
+        <a href="#pricing" class="btn btn-primary">立即开始使用</a>
+        <a href="https://1817965262.share.123pan.cn/123pan/Mcjvjv-s0YS3?pwd=SPDb" target="_blank" rel="noopener" class="btn btn-secondary">免费体验 5 小时</a>
       </div>
-      <div class="hero-mockup">
-        <div class="hero-visual">
-          <div class="vis-item">
-            <span class="vis-icon">📱</span>
-            <span class="vis-label">手机捕捉灵感</span>
-          </div>
-          <div class="vis-arrow">→</div>
-          <div class="vis-item">
-            <span class="vis-icon">🖥️</span>
-            <span class="vis-label">桌面深度整理</span>
-          </div>
-          <div class="vis-arrow">→</div>
-          <div class="vis-item">
-            <span class="vis-icon">🔒</span>
-            <span class="vis-label">本地加密存储</span>
-          </div>
-        </div>
-      </div>
+      <a href="#trust" class="hero-trust-link">🔒 查看数据安全机制</a>
     </div>
   </section>
 
-  <!-- ========== ② 产品叙事：灵感捕捉 ========== -->
-  <section class="narrative">
-    <div class="narrative-content reverse">
-      <div class="narrative-text">
-        <span class="narrative-badge">📱 随时记录</span>
-        <h2>灵感，随时记录，不再遗忘</h2>
-        <p class="narrative-sub">捕捉每一个想法，不打断你的思考节奏</p>
-        <p>打开元吉笔记就能开始记录，不需要等待加载、不需要联网。手机端专为快速捕捉设计，从打开到记录只需一次点击。</p>
-        <ul class="narrative-features">
-          <li>✨ 零等待启动，即开即用</li>
-          <li>📝 Markdown 编辑 + 实时预览</li>
-          <li>🔒 端到端加密，内容安全无忧</li>
-        </ul>
-      </div>
-      <div class="narrative-visual">
-        <div class="phone-frame">
-          <img src="images/phone-mockup.jpg" alt="元吉笔记手机端截图" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== ③ 产品叙事：知识整理 ========== -->
-  <section class="narrative">
-    <div class="narrative-content">
-      <div class="narrative-visual">
-        <div class="desktop-frame">
-          <img src="images/desktop-mockup.jpg" alt="元吉笔记桌面端截图" loading="lazy">
-        </div>
-      </div>
-      <div class="narrative-text">
-        <span class="narrative-badge">🖥️ 深度整理</span>
-        <h2>从碎片记录，到结构化知识</h2>
-        <p class="narrative-sub">让你的想法真正沉淀，而不是散落在各处</p>
-        <p>桌面端提供完整的三栏工作区：左侧导航文件夹和标签、中间笔记列表、右侧富文本编辑器。灵感在手机上随手记录，在桌面端集中整理。</p>
-        <ul class="narrative-features">
-          <li>📂 文件夹 + 标签双维分类体系</li>
-          <li>🧠 AI 思维棱镜，从 7 个维度分析笔记</li>
-          <li>🔄 WebDAV 同步，手机 ↔ 桌面无缝衔接</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== ④ 产品叙事：数据安全 ========== -->
-  <section class="narrative narrative-dark">
-    <div class="narrative-content reverse">
-      <div class="narrative-text">
-        <span class="narrative-badge">🔐 安全可控</span>
-        <h2>你的数据，只属于你自己</h2>
-        <p class="narrative-sub">本地优先 + 加密存储 + 自主同步</p>
-        <p>所有笔记默认存储在本地 SQLite 数据库中。密码经过 PBKDF2 200K 次迭代加密，桌面端使用 Fernet 格式（AES-128-CBC + HMAC-SHA256），手机端使用 AES-256-CBC。两套加密格式自动兼容。</p>
-        <ul class="narrative-features">
-          <li>🗄️ 本地存储，不依赖任何中心服务器</li>
-          <li>☁️ 可选 WebDAV 同步到自己的云盘</li>
-          <li>🔒 端到端加密，密码不对打不开</li>
-        </ul>
-      </div>
-      <div class="narrative-visual">
-        <div class="security-frame">
-          <img src="images/security-mockup.jpg" alt="元吉笔记安全界面截图" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== ⑤ PROBLEM ========== -->
-  <section id="problem" class="problem">
+  <!-- ========== ② 痛点区 ========== -->
+  <section id="pain" class="pain">
     <div class="section-header">
-      <h2>你可能已经习惯了这些问题</h2>
+      <h2>你是否也遇到这些问题？</h2>
     </div>
-    <div class="problem-list">
-      <div class="problem-item">
-        <span class="prob-icon">⚠️</span>
-        <div class="prob-text">
-          <h3>每次记录都依赖外部系统</h3>
-          <p>笔记存在别人服务器上，服务停了数据可能拿不回来</p>
+    <div class="pain-list">
+      <div class="pain-item">
+        <span class="pain-icon">⚠️</span>
+        <div>
+          <h3>笔记分散在多个工具中，无法统一管理</h3>
+          <p>这个 app 记一点，那个软件存一些，想找的时候永远找不到</p>
         </div>
       </div>
-      <div class="problem-item">
-        <span class="prob-icon">❓</span>
-        <div class="prob-text">
-          <h3>数据在哪里你无法完全确定</h3>
-          <p>同步逻辑不透明，你到底有几个副本、存在哪里，没人说得清</p>
+      <div class="pain-item">
+        <span class="pain-icon">❓</span>
+        <div>
+          <h3>云服务不可控，担心数据丢失</h3>
+          <p>服务停了、账号被封、政策变了——你的笔记可能一夜之间消失</p>
         </div>
       </div>
-      <div class="problem-item">
-        <span class="prob-icon">🔧</span>
-        <div class="prob-text">
-          <h3>工具越来越复杂，但只是想记一句话</h3>
-          <p>打开一个笔记软件要等加载、过启动页、看广告——太久了</p>
+      <div class="pain-item">
+        <span class="pain-icon">🔐</span>
+        <div>
+          <h3>隐私内容不敢存放在联网平台</h3>
+          <p>日记、财务、个人思考——存在别人服务器上，除了相信他们不会看，没有别的办法</p>
         </div>
       </div>
-      <div class="problem-item">
-        <span class="prob-icon">🔄</span>
-        <div class="prob-text">
-          <h3>多设备同步总是不可预测</h3>
-          <p>这台电脑改了，那台手机上没变，冲突了也不知道哪个版本是对的</p>
+      <div class="pain-item">
+        <span class="pain-icon">🔄</span>
+        <div>
+          <h3>换设备迁移成本高</h3>
+          <p>换手机、换电脑，数据迁移像搬一次家，格式不兼容、导出不完整</p>
         </div>
       </div>
-      <div class="problem-item">
-        <span class="prob-icon">🤝</span>
-        <div class="prob-text">
-          <h3>隐私只能「相信平台」</h3>
-          <p>你的日记、财务记录、个人思考——存在别人服务器上，除了相信他们不会看，没有别的办法</p>
-        </div>
-      </div>
-      <div class="problem-item">
-        <span class="prob-icon">🧠</span>
-        <div class="prob-text">
-          <h3>把你的混乱想法，变成清晰结构化思维</h3>
-          <p>AI 自动帮你拆解、整理、重构你的思考过程</p>
+      <div class="pain-item">
+        <span class="pain-icon">🔧</span>
+        <div>
+          <h3>工具越来越复杂，但只想简单记录</h3>
+          <p>打开一个笔记软件要等加载、过启动页、看广告——记一句话要等半分钟</p>
         </div>
       </div>
     </div>
-    <div class="problem-punchline">
-      <p>工具本该让记录更简单，但<span class="highlight">现在变得越来越复杂</span>。</p>
+    <div class="pain-highlight">
+      <p>你需要的是一个<span class="gradient-text">完全属于自己的系统</span></p>
+    </div>
+  </section>
+
+  <!-- ========== ③ 产品展示区 ========== -->
+  <section id="showcase" class="showcase">
+    <div class="section-header">
+      <h2>看见它，你就知道它对不对</h2>
     </div>
 
-    <!-- 隐性风险认知（优化 1） -->
-    <div class="risk-awareness">
-      <h3>当你的笔记依赖外部平台时，你实际上在交出三件事：</h3>
-      <div class="risk-list">
-        <div class="risk-item">
-          <span class="risk-num">①</span>
-          <div class="risk-text">
-            <strong>数据控制权</strong>
-            <p>笔记存在哪里、谁能访问、会不会被审查——这些决定权不在你手上</p>
-          </div>
+    <!-- 桌面端 -->
+    <div class="showcase-block">
+      <div class="showcase-visual">
+        <div class="desktop-frame">
+          <img src="images/desktop-mockup.jpg" alt="元吉笔记桌面端" loading="lazy">
         </div>
-        <div class="risk-item">
-          <span class="risk-num">②</span>
-          <div class="risk-text">
-            <strong>长期可访问性</strong>
-            <p>如果服务商停止运营、变更收费策略，你的数据可能无法完整导出</p>
-          </div>
+      </div>
+      <div class="showcase-text">
+        <span class="showcase-badge">🖥️ 桌面端</span>
+        <h3>专业级桌面笔记系统</h3>
+        <ul class="showcase-features">
+          <li><strong>一眼找到任何笔记</strong> — 文件树 + 标签双维导航</li>
+          <li><strong>专注写作，格式自动排版</strong> — Markdown 编辑器 + 实时预览</li>
+          <li><strong>AI 随时待命</strong> — 右侧面板一键润色、分析、摘要</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 手机端 -->
+    <div class="showcase-block reverse">
+      <div class="showcase-visual">
+        <div class="phone-frame">
+          <img src="images/phone-mockup.jpg" alt="元吉笔记手机端" loading="lazy">
         </div>
-        <div class="risk-item">
-          <span class="risk-num">③</span>
-          <div class="risk-text">
-            <strong>工具持续可用性</strong>
-            <p>你的笔记系统今天能用，不代表明年还能用——依赖外部服务永远有这个风险</p>
-          </div>
-        </div>
+      </div>
+      <div class="showcase-text">
+        <span class="showcase-badge badge-cyan">📱 手机端</span>
+        <h3>灵感来了，打开就记</h3>
+        <ul class="showcase-features">
+          <li><strong>零等待启动</strong> — 即开即用，不打断思考</li>
+          <li><strong>灵感捕捉</strong> — 一次点击开始记录</li>
+          <li><strong>标签分类</strong> — 自动整理，随手归档</li>
+          <li><strong>一键同步</strong> — 回到桌面端继续整理</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- ========== ③ SOLUTION ========== -->
+  <!-- ========== ④ 解决方案（三原则） ========== -->
   <section id="solution" class="solution">
     <div class="section-header">
-      <h2>元吉笔记，是一种更简单的方式</h2>
+      <h2>一个真正属于你的笔记系统</h2>
     </div>
     <div class="solution-cards">
       <div class="sol-card">
@@ -216,19 +153,19 @@
         <p>所有数据默认存储在你的设备上，不上传任何中心服务器。离线也能用，断网不影响记笔记。</p>
       </div>
       <div class="sol-card">
-        <div class="sol-icon">📱🖥</div>
-        <h3>双端协同</h3>
-        <p>手机端捕捉灵感，桌面端深度整理。两套界面、一套数据，同一个知识库。</p>
+        <div class="sol-icon">🔄</div>
+        <h3>可控同步</h3>
+        <p>支持自选云盘（坚果云 / Nextcloud）+ 全程加密。数据走你自己的云盘，不经过第三方服务器。</p>
       </div>
       <div class="sol-card">
         <div class="sol-icon">🔒</div>
-        <h3>可控同步</h3>
-        <p>支持自选云盘（坚果云 / Nextcloud）+ 全程加密。数据走你自己的云盘，不经过第三方服务器。</p>
+        <h3>端到端加密</h3>
+        <p>敏感内容完全加密，密码不对打不开。加密算法公开透明，两套格式自动兼容。</p>
       </div>
     </div>
   </section>
 
-  <!-- ========== ④ DIFFERENCE ========== -->
+  <!-- ========== ⑤ 对比表（评估补充） ========== -->
   <section id="difference" class="difference">
     <div class="section-header">
       <h2>为什么选择这种方式？</h2>
@@ -255,7 +192,7 @@
           </tr>
           <tr>
             <td class="dim-label">隐私</td>
-            <td>依赖平台</td>
+            <td>依赖平台承诺</td>
             <td class="td-win">✔ 本地加密</td>
           </tr>
           <tr>
@@ -263,141 +200,174 @@
             <td>持续订阅</td>
             <td class="td-win">✔ 一次买断</td>
           </tr>
-          <tr>
-            <td class="dim-label">使用复杂度</td>
-            <td>中等</td>
-            <td class="td-win">✔ 更简单</td>
-          </tr>
         </tbody>
       </table>
     </div>
     <div class="diff-punchline">
-      <p>你不需要更复杂的工具，你需要<span class="highlight">更可控的系统</span>。</p>
-    </div>
-    <!-- 不可替代性锚点 -->
-    <div class="anchor-line">
-      <p>你的数据应该由你决定存在哪里，<span class="highlight">而不是由工具决定</span>。</p>
+      <p>你不需要更复杂的工具，你需要<span class="gradient-text">更可控的系统</span>。</p>
     </div>
   </section>
 
-  <!-- ========== ⑤ 迁移理由（优化 2） ========== -->
-  <section class="migration">
+  <!-- ========== ⑥ 功能区（结果表达） ========== -->
+  <section class="features">
     <div class="section-header">
-      <h2>为什么现在是更换笔记系统的合适时机？</h2>
+      <h2>为思考而设计的工具</h2>
     </div>
-    <div class="migration-grid">
-      <div class="migration-card">
-        <div class="mig-icon">📈</div>
-        <h3>工具越来越复杂，但记录需求没有变化</h3>
-        <p>你需要的是快速记录和随时查阅，不是学习一个越来越庞大的系统。笔记工具不应该成为新的负担。</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>快速记录</h3>
+        <p>捕捉灵感，不打断思考。打开就能写，零等待启动。</p>
       </div>
-      <div class="migration-card">
-        <div class="mig-icon">📦</div>
-        <h3>数据沉淀越来越重要，但控制力在下降</h3>
-        <p>几年积累的笔记是你最重要的数字资产之一。你确定要把它放在一个你无法完全控制的系统里吗？</p>
+      <div class="feature-card">
+        <div class="feature-icon">🗂️</div>
+        <h3>知识整理</h3>
+        <p>标签 + 文件夹双维分类，让碎片记录变成结构化知识。</p>
       </div>
-      <div class="migration-card">
-        <div class="mig-icon">🔄</div>
-        <h3>多设备使用越来越频繁，但同步不可控</h3>
-        <p>手机、平板、电脑——你希望在任意设备上随时访问笔记，而不是被同步问题困扰。</p>
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>数据安全</h3>
+        <p>本地加密存储，密码不对打不开。你的隐私只有你自己能看。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>跨设备同步</h3>
+        <p>WebDAV 自主控制，数据走你自己的云盘，不经过第三方。</p>
       </div>
     </div>
   </section>
 
-  <!-- ========== ⑥ SCENARIO ========== -->
-  <section class="scenario">
+  <!-- ========== ⑦ AI 增强区（独立模块） ========== -->
+  <section class="ai-section">
     <div class="section-header">
-      <h2>它适合什么样的人？</h2>
+      <h2>不只是笔记，是<span class="gradient-text">思维增强系统</span></h2>
     </div>
-    <div class="scenario-grid">
-      <div class="scenario-card">
-        <div class="scenario-icon">👨‍💻</div>
-        <h3>技术用户</h3>
-        <p>构建个人知识库与长期记录系统，数据自主可控不依赖平台</p>
+    <div class="ai-grid">
+      <div class="ai-card">
+        <div class="ai-icon">✍️</div>
+        <h3>内容润色</h3>
+        <p>一键优化表达，让文字更清晰有力</p>
       </div>
-      <div class="scenario-card">
-        <div class="scenario-icon">📚</div>
-        <h3>学习用户</h3>
-        <p>整理学习内容与成长记录，标签 + 双向链接自动构建知识网络</p>
+      <div class="ai-card">
+        <div class="ai-icon">🔍</div>
+        <h3>多角度分析</h3>
+        <p>思维棱镜从 7 个维度拆解你的想法</p>
       </div>
-      <div class="scenario-card">
-        <div class="scenario-icon">🧠</div>
-        <h3>思考型用户</h3>
-        <p>记录灵感、写作与复盘，AI 思维棱镜帮你把问题想透彻</p>
+      <div class="ai-card">
+        <div class="ai-icon">📋</div>
+        <h3>自动摘要</h3>
+        <p>长文秒变要点，快速回顾核心内容</p>
+      </div>
+      <div class="ai-card">
+        <div class="ai-icon">🔗</div>
+        <h3>知识关联推荐</h3>
+        <p>自动发现笔记间的隐藏联系</p>
       </div>
     </div>
   </section>
 
-  <!-- ========== ⑥ TRUST ========== -->
+  <!-- ========== ⑧ 安全信任区 ========== -->
   <section id="trust" class="trust">
     <div class="section-header">
-      <h2>你的数据，始终属于你</h2>
+      <h2>为什么可以信任它？</h2>
     </div>
     <div class="trust-grid">
-      <div class="trust-item">不依赖任何中心服务器</div>
-      <div class="trust-item">无账号体系</div>
-      <div class="trust-item">可完全离线使用</div>
-      <div class="trust-item">支持自选云盘同步</div>
-      <div class="trust-item">数据默认本地存储</div>
-      <div class="trust-item">端到端加密传输</div>
+      <div class="trust-item">
+        <span class="trust-icon">🗄️</span>
+        <span>数据默认本地存储</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🌐</span>
+        <span>不依赖中心服务器</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">📤</span>
+        <span>可随时导出数据</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">💰</span>
+        <span>一次买断，无订阅</span>
+      </div>
     </div>
     <div class="trust-punchline">
-      <p>即使产品停止更新，<span class="highlight">你的数据仍然完全可用</span>。</p>
+      <p>即使产品停止更新，<span class="gradient-text">你的数据仍然完全可用</span>。</p>
     </div>
   </section>
 
-  <!-- ========== ⑦ PRICING ========== -->
+  <!-- ========== ⑨ 价格区（核心转化） ========== -->
   <section id="pricing" class="pricing">
     <div class="section-header">
-      <h2>一次购买，永久使用</h2>
+      <h2>一次买断，永久使用</h2>
       <p>不是便宜，是没有风险</p>
     </div>
     <div class="pricing-card">
       <div class="pricing-badge">标准版</div>
       <div class="pricing-header">
         <div class="pricing-price">
-          <span class="price-original">¥128</span>
+          <span class="price-original">¥98</span>
           <span class="price-current">¥58</span>
         </div>
         <p class="pricing-desc">桌面端 + 手机端，全部功能无限制</p>
       </div>
+      <p class="pricing-promo">当前为早期推广阶段价格，后续将恢复标准价格 ¥98</p>
       <ul class="pricing-features">
-        <li>✓ 完整功能</li>
-        <li>✓ 双端支持</li>
-        <li>✓ 加密能力</li>
-        <li>✓ 本地优先</li>
-        <li>✓ 自选云盘同步</li>
+        <li>✓ 全功能永久开放</li>
+        <li>✓ AI 功能包含</li>
+        <li>✓ 跨设备同步</li>
+        <li>✓ 端到端加密</li>
         <li>✓ 永久免费更新</li>
       </ul>
-      <a href="#" class="btn btn-primary btn-block" onclick="alert('请先联系客服')">立即试用</a>
-      <center><p class="highlight">试用和购买请联系</p></center>
-      <center><p class="highlight">微信：fdst68</p></center>
-      <center><p class="highlight">QQ:1411840771</p></center>
-      <center><p class="highlight">公众号：元吉实验室</p></center>
+      <p class="pricing-risk">无订阅 · 无隐藏收费 · 可导出数据</p>
+      <div class="pricing-cta">
+        <a href="https://1817965262.share.123pan.cn/123pan/Mcjvjv-s0YS3?pwd=SPDb" target="_blank" rel="noopener" class="btn btn-primary btn-block">免费体验 5 小时</a>
+      </div>
+      <div class="pricing-contact">
+        <p>试用和购买请联系</p>
+        <div class="contact-channels">
+          <span>微信：fdst68</span>
+          <span>QQ：1411840771</span>
+          <span>公众号：元吉实验室</span>
+        </div>
+      </div>
+      <p class="pricing-scarcity">当前价格不会长期开放</p>
     </div>
   </section>
 
-  <!-- ========== ⑨ FINAL CTA ========== -->
-  <section id="download" class="final-cta">
+  <!-- ========== ⑩ CTA 系统（三层） ========== -->
+  <section class="cta-section">
     <div class="cta-content">
-      <h2>从今天开始，把你的数据<br>重新掌握在自己手中</h2>
+      <h2>开始构建你的数据系统</h2>
       <div class="cta-buttons">
-        <a href="https://1817965262.share.123pan.cn/123pan/Mcjvjv-s0YS3?pwd=SPDb" target="_blank" rel="noopener" class="btn btn-primary btn-download">
-          <span class="dl-icon">⬇</span>
-          <span class="dl-text">
-            <span class="dl-label">立即开始使用</span>
-            <span class="dl-sub">下载桌面端 · Windows 10/11 · 约 250 MB</span>
-          </span>
-        </a>
-        <a href="#trust" class="btn btn-outline btn-download">
-          <span class="dl-icon">🔒</span>
-          <span class="dl-text">
-            <span class="dl-label">查看安全设计</span>
-            <span class="dl-sub">了解数据加密和隐私保护方案</span>
-          </span>
-        </a>
+        <a href="#pricing" class="btn btn-primary btn-lg">立即开始使用</a>
+        <a href="https://1817965262.share.123pan.cn/123pan/Mcjvjv-s0YS3?pwd=SPDb" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">免费体验 5 小时</a>
       </div>
+      <a href="#trust" class="cta-link">🔒 查看数据安全机制</a>
       <p class="cta-footnote">支持 Windows + Android · 本地存储 · 数据可完全导出</p>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section id="faq" class="faq">
+    <div class="section-header">
+      <h2>常见问题</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>是否需要联网？</summary>
+        <p>不需要。核心功能完全本地运行，断网也能正常使用所有笔记功能。</p>
+      </details>
+      <details>
+        <summary>数据会上传吗？</summary>
+        <p>不会。除非你主动开启 WebDAV 同步，否则数据只存在于你的设备上。</p>
+      </details>
+      <details>
+        <summary>如何换设备？</summary>
+        <p>通过加密备份恢复。在旧设备导出备份，新设备导入即可，全程加密保护。</p>
+      </details>
+      <details>
+        <summary>是否订阅？</summary>
+        <p>一次买断，无订阅。¥58 包含全部功能，永久使用，永久免费更新。</p>
+      </details>
     </div>
   </section>
 
@@ -409,14 +379,29 @@
         <p>让每一个想法都有迹可循</p>
       </div>
       <div class="footer-links">
-        <a href="#">隐私政策</a>
-        <a href="#" onclick="alert('微信：fdst68,QQ:1411840771,公众号：元吉实验室')">联系我们</a>
+        <a href="#trust">安全机制</a>
+        <a href="#faq">常见问题</a>
+      </div>
+      <div class="footer-contact">
+        <p>微信：fdst68 · QQ：1411840771 · 公众号：元吉实验室</p>
       </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 元吉笔记 · All Rights Reserved</p>
     </div>
   </footer>
+
+  <!-- 汉堡菜单 JS（纯 CSS 无法实现切换） -->
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    document.querySelectorAll('#navLinks a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+  </script>
 
 </body>
 </html>
